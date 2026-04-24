@@ -1,3 +1,6 @@
+/**
+ * Provides persistent top-level navigation and context about the dashboard's purpose and data refresh constraints.
+ */
 export function SiteHeader() {
   return (
     <header className="mb-10 border-b border-[var(--border)] pb-6">

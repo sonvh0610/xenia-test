@@ -3,6 +3,9 @@ type DashboardErrorStateProps = {
   onRetry: () => void;
 };
 
+/**
+ * Renders a consistent error message boundary within the dashboard, ensuring users are informed of data fetching failures and providing a clear path to retry the action.
+ */
 export function DashboardErrorState({
   message,
   onRetry,

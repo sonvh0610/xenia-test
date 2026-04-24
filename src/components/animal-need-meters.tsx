@@ -15,6 +15,7 @@ const barColor: Record<ReturnType<typeof needLabel>, string> = {
 };
 
 function Meter({ label, value }: { label: string; value: NeedLevel }) {
+  // Grab the right color category based on how high the need is
   const level = needLabel(value);
   return (
     <div>
@@ -41,12 +42,16 @@ function Meter({ label, value }: { label: string; value: NeedLevel }) {
   );
 }
 
+/**
+ * Visualizes the various physical needs of an animal (hunger, thirst, hygiene) using progress bars or compact numerical displays to aid zookeepers in prioritizing care.
+ */
 export function AnimalNeedMeters({
   hunger,
   thirst,
   hygiene,
   compact = false,
 }: AnimalNeedMetersProps) {
+  // The compact view is just text, used in the small cards to save space
   if (compact) {
     return (
       <div className="grid grid-cols-3 gap-2 text-xs">

@@ -6,6 +6,9 @@ import { zooAnimalsResponseSchema } from "@/schemas/zoo-animal";
 // always dynamic — nothing to cache
 export const dynamic = "force-dynamic";
 
+/**
+ * Exposes a serverless endpoint to simulate fetching live data for the zoo dashboard, guaranteeing fresh simulated values on every request.
+ */
 export function GET() {
   const body = {
     animals: generateAnimals(20),

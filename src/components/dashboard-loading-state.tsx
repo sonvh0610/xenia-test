@@ -1,3 +1,6 @@
+/**
+ * Displays a skeleton layout to serve as a placeholder while dashboard data is being fetched, preventing jarring layout shifts and improving perceived performance.
+ */
 export function DashboardLoadingState() {
   return (
     <div
@@ -6,6 +9,7 @@ export function DashboardLoadingState() {
       aria-live="polite"
       aria-busy
     >
+      {/* Just render 4 empty skeleton cards while we wait for the real data */}
       {Array.from({ length: 4 }).map((_, i) => (
         <div
           key={i}

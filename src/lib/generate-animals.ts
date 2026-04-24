@@ -75,6 +75,9 @@ function makeId(): string {
   return crypto.randomUUID();
 }
 
+/**
+ * Provides a reliable source of mock data for development and testing environments, allowing the team to work on UI components without relying on a functional backend or database.
+ */
 export function generateAnimals(count: number = 20): ZooAnimal[] {
   return Array.from({ length: count }, () => ({
     id: makeId(),

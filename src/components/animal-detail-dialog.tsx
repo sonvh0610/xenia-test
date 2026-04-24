@@ -10,9 +10,16 @@ type AnimalDetailDialogProps = {
   onClose: () => void;
 };
 
-export function AnimalDetailDialog({ animal, onClose }: AnimalDetailDialogProps) {
+/**
+ * Presents a modal overlay with comprehensive details and keeper notes for a single animal, keeping the user in the context of the dashboard.
+ */
+export function AnimalDetailDialog({
+  animal,
+  onClose,
+}: AnimalDetailDialogProps) {
   const ref = useRef<HTMLDialogElement>(null);
 
+  // Watch the selected animal prop to open or close the native dialog element
   useEffect(() => {
     if (!ref.current) return;
     if (animal) {

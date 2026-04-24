@@ -6,6 +6,9 @@ type AnimalListProps = {
   onSelect: (animal: ZooAnimal) => void;
 };
 
+/**
+ * Renders a responsive grid of animal cards, managing the layout and selection state to drill down into specific animal details.
+ */
 export function AnimalList({ animals, onSelect }: AnimalListProps) {
   return (
     <ul className="grid gap-4 sm:grid-cols-2" aria-label="Zoo animals">

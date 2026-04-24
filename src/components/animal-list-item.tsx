@@ -6,9 +6,16 @@ type AnimalListItemProps = {
   onSelect: (animal: ZooAnimal) => void;
 };
 
+/**
+ * Renders an individual animal card with its basic information and a compact summary of its current needs, serving as an interactive entry point for more details.
+ */
 export function AnimalListItem({ animal, onSelect }: AnimalListItemProps) {
   return (
     <li>
+      {/* 
+        We use a button here instead of a div for accessibility, 
+        so keyboard users can easily tab through and select animals
+      */}
       <button
         type="button"
         onClick={() => onSelect(animal)}

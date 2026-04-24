@@ -10,11 +10,17 @@ const geist = Geist({
   subsets: ["latin"],
 });
 
+/**
+ * Defines the static metadata for the application, essential for SEO and browser tab display.
+ */
 export const metadata: Metadata = {
   title: "Enclosures",
   description: "Mock keeper dashboard for animal needs",
 };
 
+/**
+ * Establishes the foundational HTML structure, applies global styles and fonts, and wraps the application with required global context providers.
+ */
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={geist.variable}>

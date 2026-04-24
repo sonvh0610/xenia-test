@@ -9,9 +9,20 @@ import { DashboardLoadingState } from "@/components/dashboard-loading-state";
 import { useZooAnimals } from "@/hooks/use-zoo-animals";
 import type { ZooAnimal } from "@/schemas/zoo-animal";
 
+/**
+ * Orchestrates the data fetching and interactive state of the main dashboard, coordinating loading states, errors, and displaying the list of animals and their details.
+ */
 export function ZooDashboard() {
-  const { data, isPending, isError, error, refetch, isFetching, dataUpdatedAt } =
-    useZooAnimals();
+  const {
+    data,
+    isPending,
+    isError,
+    error,
+    refetch,
+    isFetching,
+    dataUpdatedAt,
+  } = useZooAnimals();
+
   const [selected, setSelected] = useState<ZooAnimal | null>(null);
 
   if (isPending && !data) {
@@ -57,10 +68,7 @@ export function ZooDashboard() {
         animals={data.animals}
         onSelect={(animal) => setSelected(animal)}
       />
-      <AnimalDetailDialog
-        animal={selected}
-        onClose={() => setSelected(null)}
-      />
+      <AnimalDetailDialog animal={selected} onClose={() => setSelected(null)} />
     </div>
   );
 }
