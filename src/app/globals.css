@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0c0f14;
+  --foreground: #e8eaef;
+  --card: #151922;
+  --muted: #8b95a5;
+  --accent: #3b82f6;
+  --danger: #f87171;
+  --ok: #34d399;
+  --border: #252b36;
+}
+
+body {
+  color: var(--foreground);
+  background: radial-gradient(1200px 600px at 20% 0%, #152038 0%, transparent 55%),
+    radial-gradient(900px 500px at 100% 20%, #1a1030 0%, transparent 50%), var(--background);
+  min-height: 100vh;
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 1.2s ease-in-out infinite;
+}

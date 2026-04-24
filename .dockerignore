@@ -1,0 +1,7 @@
+node_modules
+.next
+.git
+.github
+2026*.pdf
+.env*.local
+*.log
