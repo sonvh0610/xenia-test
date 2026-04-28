@@ -4,7 +4,7 @@ A Next.js demo app that shows a **zoo operations dashboard** for a fictional col
 
 ## Tech stack
 
-- **Next.js 15** (App Router, Turbopack in dev) with `output: "standalone"` for Docker
+- **Next.js 16** (App Router, Turbopack in dev) with `output: "standalone"` for Docker
 - **React 19**
 - **TanStack React Query** — fetch + cache, 60s poll, manual refresh
 - **Zod** — request/response shape validation
@@ -13,8 +13,9 @@ A Next.js demo app that shows a **zoo operations dashboard** for a fictional col
 
 ## Prerequisites
 
-- **Node.js 20+** (matches the Docker image)
+- **Node.js 24** (recommended; see `.nvmrc` and `.node-version`)
 - **npm** (lockfile is `package-lock.json`)
+- **Docker Desktop** (for containerized runs)
 
 ## Local development
 
@@ -27,15 +28,22 @@ Open [http://localhost:3000](http://localhost:3000). The dev server uses Turbopa
 
 Other scripts:
 
-| Script        | Description        |
-| ------------- | ------------------ |
-| `npm run build` | Production build |
+| Script          | Description                             |
+| --------------- | --------------------------------------- |
+| `npm run build` | Production build                        |
 | `npm run start` | Start production server (after `build`) |
-| `npm run lint`  | Run ESLint        |
+| `npm run lint`  | Run ESLint                              |
 
 ## Docker
 
-Build and run with Compose (exposes port **3000**):
+Build and run directly with Docker (exposes port **3000**):
+
+```bash
+docker build -t xenia-test .
+docker run --rm -p 3000:3000 xenia-test
+```
+
+Or use Docker Compose:
 
 ```bash
 docker compose up --build
