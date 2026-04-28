@@ -1,3 +1,5 @@
+"use client";
+
 import { needLabel } from "@/lib/need-label";
 import type { NeedLevel } from "@/schemas/zoo-animal";
 

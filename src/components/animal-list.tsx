@@ -1,3 +1,5 @@
+"use client";
+
 import { AnimalListItem } from "@/components/animal-list-item";
 import type { ZooAnimal } from "@/schemas/zoo-animal";
 

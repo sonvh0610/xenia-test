@@ -1,3 +1,5 @@
+"use client";
+
 import type { ZooAnimal } from "@/schemas/zoo-animal";
 import { AnimalNeedMeters } from "@/components/animal-need-meters";
 

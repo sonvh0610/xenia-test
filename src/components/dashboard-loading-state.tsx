@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * Displays a skeleton layout to serve as a placeholder while dashboard data is being fetched, preventing jarring layout shifts and improving perceived performance.
  */

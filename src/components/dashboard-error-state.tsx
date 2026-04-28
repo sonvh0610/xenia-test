@@ -1,3 +1,5 @@
+"use client";
+
 type DashboardErrorStateProps = {
   message: string;
   onRetry: () => void;
