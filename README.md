@@ -74,3 +74,48 @@ src/
 ## License / privacy
 
 `package.json` sets `"private": true`. This is a sample application with **no real zoo data** — all animals are random fixtures for demonstration.
+
+## ⚠️ Version Upgrade Notice
+
+This project was originally created using an outdated development environment and boilerplate setup.
+
+### 🔍 Background
+- The previous workspace was running **Node.js v20**
+- The project was copied from an older **Next.js boilerplate (v15)** without upgrading dependencies
+
+This caused:
+- Outdated dependency compatibility
+- Potential performance and security issues
+- Missing newer features from the latest ecosystem
+
+---
+
+### 🚀 Upgrade
+
+The project has been upgraded to align with the current standards:
+
+- **Node.js:** v20 → **v24**
+- **Next.js:** v15 → **v16**
+
+---
+
+### ✅ Why Upgrade?
+
+- **Better compatibility** with modern libraries
+- **Improved performance** and optimizations
+- **Security updates** and bug fixes
+- **Access to new features** in Next.js and React ecosystem
+
+---
+
+### ⚙️ Setup Notes
+
+Make sure your local environment meets the requirements:
+
+- Node.js **v24+**
+
+If you run into issues after pulling the latest code:
+
+```bash
+rm -rf node_modules package-lock.json
+npm install
